@@ -1,13 +1,19 @@
-# simple Python web application
+# Simple Python web application
 
 This repo is for building a simple Python web application running on Docker Compose. The application uses the Flask framework and maintains a hit counter in Redis. While the sample uses Python, the concepts demonstrated here should be understandable even if you’re not familiar with it.
+
+## Table of Contents
+  - [Prerequisites](#Prerequisites)
+    - [Run Instructions](#Run-Instructions)
+    - [Handling transient errors](#Handling-transient-errors)
+
 
 ## Prerequisites
 
 Make sure you have already installed both Docker Engine and Docker Compose. You don’t need to install Python or Redis, as both are provided by Docker images.
 
 
-# How to Run
+# Run Instructions
 
 From your project directory, start up your application by running 
 

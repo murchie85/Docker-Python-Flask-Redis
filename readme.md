@@ -95,3 +95,57 @@ The new volumes key
 
 
 mounts the project directory (current directory) on the host to /code inside the container, allowing you to modify the code on the fly, without having to rebuild the image.
+
+Shared folders, volumes, and bind mounts
+
+If your project is outside of the Users directory (cd ~), then you need to share the drive or location of the Dockerfile and volume you are using. If you get runtime errors indicating an application file is not found, a volume mount is denied, or a service cannot start, try enabling file or drive sharing. Volume mounting requires shared drives for projects that live outside of C:\Users (Windows) or /Users (Mac), and is required for any project on Docker for Windows that uses Linux containers. For more information, see Shared Drives on Docker for Windows, File sharing on Docker for Mac, and the general examples on how to Manage data in containers.
+
+If you are using Oracle VirtualBox on an older Windows OS, you might encounter an issue with shared folders as described in this VB trouble ticket. Newer Windows systems meet the requirements for Docker for Windows and do not need VirtualBox.
+
+
+# Command Summary 
+
+## See What's running 
+docker-compose ps
+
+```
+Adams-MacBook-Pro:simplePython adammcmurchie$ docker-compose ps
+
+
+        Name                      Command               State           Ports         
+--------------------------------------------------------------------------------------
+simplepython_redis_1   docker-entrypoint.sh redis ...   Up      6379/tcp              
+simplepython_web_1     python app.py                    Up      0.0.0.0:5000->5000/tcp
+```
+
+## Run Silent 
+
+```
+docker-compose up -d
+```
+If you started Compose with docker-compose up -d, stop your services once you’ve finished with them:
+```
+$ docker-compose stop
+```
+
+## One off Commands 
+
+The docker-compose run command allows you to run one-off commands for your services. For example, to see what environment variables are available to the web service:
+
+```
+$ docker-compose run web env
+
+```
+## Shutdown 
+
+```
+docker-compose down
+```
+## Fully tear down 
+
+You can bring everything down, removing the containers entirely, with the down command. Pass --volumes to also remove the data volume used by the Redis container:
+```
+$ docker-compose down --volumes
+```
+ 
+At this point, you have seen the basics of how Compose works.

@@ -3,9 +3,15 @@
 This repo is for building a simple Python web application running on Docker Compose. The application uses the Flask framework and maintains a hit counter in Redis. While the sample uses Python, the concepts demonstrated here should be understandable even if you’re not familiar with it.
 
 ## Table of Contents
-  - [Prerequisites](#Prerequisites)
+  - [Usage](#Usage)
+    - [Prerequisites](#Prerequisites)
     - [Run Instructions](#Run-Instructions)
     - [Handling transient errors](#Handling-transient-errors)
+  - [Build Info](#Build Info)  
+    - [STEPS (HIGH LEVEL)](#STEPS-(HIGH-LEVEL))
+
+
+# Usage 
 
 
 ## Prerequisites
@@ -44,7 +50,7 @@ In this example, redis is the hostname of the redis container on the application
 
 Note the way the get_hit_count function is written. This basic retry loop lets us attempt our request multiple times if the redis service is not available. This is useful at startup while the application comes online, but also makes our application more resilient if the Redis service needs to be restarted anytime during the app’s lifetime. In a cluster, this also helps handling momentary connection drops between nodes.
 
-
+# Build Info
 
 ## STEPS (HIGH LEVEL)
 

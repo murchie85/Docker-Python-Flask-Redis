@@ -86,4 +86,12 @@ services:
     image: "redis:alpine"
 ```
 
-The new volumes key mounts the project directory (current directory) on the host to /code inside the container, allowing you to modify the code on the fly, without having to rebuild the image.
+The new volumes key 
+
+```
+    volumes:
+     - .:/code
+```
+
+
+mounts the project directory (current directory) on the host to /code inside the container, allowing you to modify the code on the fly, without having to rebuild the image.

@@ -7,9 +7,7 @@ This repo is for building a simple Python web application running on Docker Comp
     - [Prerequisites](#Prerequisites)
     - [Run Instructions](#Run-Instructions)
     - [Handling transient errors](#Handling-transient-errors)
-  - [hi](#hi)  
-
-  - [Build Info](#Build Info)  
+  - [Build Info](#Build Info)
     - [High Level Steps](#High Level Steps)
   - [Command Summary](# Command Summary )
 

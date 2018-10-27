@@ -8,7 +8,8 @@ This repo is for building a simple Python web application running on Docker Comp
     - [Run Instructions](#Run-Instructions)
     - [Handling transient errors](#Handling-transient-errors)
   - [Build Info](#Build Info)  
-    - [STEPS (HIGH LEVEL)](#STEPS-(HIGH-LEVEL))
+    - [High Level Steps](#High Level Steps)
+  - [Command Summary](# Command Summary )
 
 
 # Usage 
@@ -52,7 +53,7 @@ Note the way the get_hit_count function is written. This basic retry loop lets u
 
 # Build Info
 
-## STEPS (HIGH LEVEL)
+## High Level Steps
 
 1. Created an app called app.py
 2. Created requirements file with (flask and redis declared)
